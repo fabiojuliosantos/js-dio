@@ -1,5 +1,9 @@
 //Symbols
 
-const uniqueId = Symbol();
+const uniqueId = Symbol("Hello World");
 
-console.log(uniqueId)
+const obj = {
+    [uniqueId]: 'Hello'
+};
+
+console.log(obj)
