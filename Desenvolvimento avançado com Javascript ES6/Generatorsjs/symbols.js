@@ -2,8 +2,19 @@
 
 const uniqueId = Symbol("Hello World");
 
-const obj = {
-    [uniqueId]: 'Hello'
-};
+Symbol.iterator;
+Symbol.split;
+Symbol.toStringTag;
 
-console.log(obj)
+const arr = [1, 2, 3, 4];
+
+const it = arr[Symbol.iterator]();
+
+while (true) {
+  let { value, done } = it.next();
+
+  if (done) {
+    break;
+  }
+  console.log(value);
+}
